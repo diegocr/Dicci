@@ -1,0 +1,71 @@
+
+;Script de instalacion para Dicci.
+;$VER: Dicci installer 0.1 (01.04.02)
+
+(welcome
+	"\nBienvenido al instalador de Dicci.\n"
+)
+
+(if (exists "Work:" (noreq))
+	(set @default-dir "Work:Dicci") ;then clause
+	(set @default-dir "SYS:Dicci")  ;else clause
+)
+
+(set destdir
+	(askdir
+		(prompt "Seleccione el directorio donde desea instalar Dicci.")
+		(help @askdir-help)
+		(default @default-dir)
+		(newpath)
+	)
+)
+
+(set @default-dest destdir)
+
+(if (NOT (exists destdir (noreq)))
+	(makedir destdir
+		(prompt "Creado el directorio  " destdir)
+		(help @makedir-help)
+		(infos)
+	)
+)
+
+(copyfiles
+	(prompt "Seleccione ficheros a instalar en " destdir)
+	(help
+		"Dicci:\nEl fichero ejecutable.\n\n"
+		"Dicci.guide:\nLa documentacion...\n\n"
+		"General help:\n"
+		@copylib-help)
+	(source "")
+	(dest destdir)
+	(choices "Dicci" "Dicci.guide")
+	(infos)
+	(confirm)
+)
+
+(copyfiles
+	(prompt "Que librerias desea instalar?")
+	(help "Es imprescindible que tenga estas librerias instaladas en su sistema para que Dicci funcione correctamente.\n\n"
+		@copyfiles-help)
+	(source "Libs")
+	(dest "Libs:")
+	(all)
+	(infos)
+	(confirm)
+)
+
+(copyfiles
+	(prompt "Instalar la clase HTMLView?")
+	(help "Al igual que las librerias, Dicci no seria lo que es sin esta clase MUI, compruebe si la tiene y si no es asi instalela.\n\n"
+		@copyfiles-help)
+	(source "mui")
+	(dest "MUI:Libs/mui")
+	(all)
+	(infos)
+	(confirm)
+)
+
+(exit
+	"\n\nQue lo disfrutes! :-)"
+)

@@ -1,0 +1,289 @@
+@DATABASE "Dicci.guide"
+@$VER: Dicci.guide v0.1  Dicci v1.9.1  ©2002 By Diego CR
+@INDEX contents
+@NODE MAIN "Documentacion de Dicci..."
+@{b}
+                                                                              
+   #########                                                                  
+   #############                                                              
+   ##############       #####        #######            #######       #####   
+   ###############     ######      ###########        ###########    ######   
+   ################    ######     #############      #############   ######   
+   ################     #####    ###############    ###############   #####   
+    ######## #######    #####   ################   ################   #####   
+    ######   #  ####    ####    #####   ### ####   #####   ### ####   ####    
+    #####    #  ####    ####    ###         # ##   ###         # ##   ####    
+    #####       ####    ####   ####            #  ####            #   ####    
+    #####       ####    ####   ###             #  ###             #   ####    
+    ####        ####     ###   ###                ###                  ###    
+    ####        ####     ###   ###                ###                  ###    
+     ###        ###      ###    ##                 ##                  ###    
+     ###       ###       ###    ####               ####                ###    
+     ###       ###       ###    ### #####          ### #####           ###    
+     ###      ###        ###     ##   #### ## #     ##   #### ## #     ###    
+     ###     ####        ##            ##     #           ##     #     ##     
+     ###    #####        ##                                            ##     
+     #########  #         #                                             #     
+     ########             #  @{ub} @{fg shine}             v1.9.1   (15.01.03) @{fg text}      @{b}     #     
+      ###  ##                                                                 
+       #    #                                                                 
+       #                                                                      
+
+
+
+@{ub}    @{" Contenido " link "contents"}
+@ENDNODE
+@NODE contents "Indice"
+@{JCENTER}
+@{JCENTER}
+@{JCENTER}@{b}
+@{JCENTER}¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯@{ub}
+@{JCENTER}
+@{JCENTER}Documentacion de Dicci v0.1 (01.04.02)
+@{JCENTER}
+@{JCENTER}Dicci v1.9.1 (15.01.03)
+@{JCENTER}
+@{JCENTER}Copyright 2001-02  por Diego CR
+@{JCENTER}Todos los derechos reservados
+@{JCENTER}@{b}
+@{JCENTER}¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯@{ub}
+@{JCENTER}
+@{JCENTER}
+@{JCENTER}
+@{JCENTER}
+@{JCENTER}
+@{JCENTER}
+@{JCENTER}@{" Introduccion      " link "intro"}
+@{JCENTER}@{" Caracteristicas   " link "carac"}
+@{JCENTER}@{" Requerimientos    " link "reqes"}
+@{JCENTER}@{" Instalacion       " link "insta"}
+@{JCENTER}@{" Uso               " link "pausa"}
+@{JCENTER}@{" Historia          " link "histo"}
+@{JCENTER}@{" Futuro            " link "futur"}
+@{JCENTER}@{" Licencia          " link "licen"}
+@{JCENTER}@{" Soporte           " link "sopor"}
+@{JCENTER}
+@ENDNODE
+@NODE intro "Introduccion"
+
+
+Dicci es un programa de consultas a diccionarios en linea...
+
+Dispone de diccionarios de lengua, sinonimos/antonimos,
+español-ingles,español-frances,castellano-catalan,
+enciclopedia medica, terminos informaticos, ..y mas!
+
+Esta hecho integramente en ARexx, y RxMUI
+
+
+@ENDNODE
+@NODE carac "Caracteristicas"
+
+
+	ø Acceso rapido y directo a distintos motores de busqueda
+
+	ø Elimina todo codigo basura, como puede ser java/js, banners, etc
+
+	ø Facil manejo y comprension...
+
+	ø Evita viajar de web en web buscando una definicion...
+
+	ø Muestra unica y exclusivamente lo que esta buscando
+
+	ø Gran variedad de diccionarios
+
+	ø ...y mucho mas !..
+
+	ø 
+
+
+@ENDNODE
+@NODE reqes "Requerimientos"
+
+
+	ø AmigaOS v3.0 o superior
+
+	ø RexxMast
+
+	ø RexxSysLib.library
+
+	ø MUI
+
+	ø RxMUI.library
+
+	ø RMH.library
+
+	ø RxSocket.library
+
+	ø RxLibNet.library *
+
+	ø RexxApp.library *
+
+	ø HTMLView.mcc
+
+	ø BSDSocket.library (AmiTCP, Miami[DX], Genesis)
+
+	ø LHA, en C:, para la actualizacion online..
+
+	ø 
+
+@ENDNODE
+@NODE insta "Instalacion"
+
+
+Se suministra script de instalacion.
+
+o lo que es lo mismo, copie "dicci" y "dicci.guide" donde desee,,
+las librerias y la clase MUI, (si no dispone de ellas), a  Libs:
+y MUI:Libs/mui, respectivamente.
+
+
+
+
+@ENDNODE
+@NODE pausa "Uso"
+
+
+No hay mucho que decir...
+
+El uso es bastante simple, escriba la palabra o cadena que desea
+buscar/corregir/traducir en la casilla correspondiente y tras
+pulsar Return/boton se establecera la conexion, al servidor
+pertinente, y seran mostrados los resultados encontrados.
+
+
+
+@ENDNODE
+@NODE histo "Historia"
+
+1.0.-	Primera version publica
+
+
+1.1.-	<..interna..>
+
+
+1.2.-	Nuevo metodo de solicitud
+
+
+1.3.-	Añadido mas stack -internamente- para evitar problemas...
+	y pequeños fallos corregidos
+
+
+1.4.-	Incluido el diccionario de la Real Academia Española
+
+
+1.5.-	Nuevo look..
+	Uso de RxLibNet.library por URLEncode()
+	 (El prg funciona aunque no encuentre esta libreria, pero no tendran
+	  resultados, en RAE, palabras con "Ñ" o caracteres especiales..)
+	Dos Nuevos diccionarios: Medico é Informatico
+	y algunas mejoras sin importancia...
+
+
+1.6.-	Modificado todo el codigo para usar RxSocket.library
+	Eliminado el periodo de caducidad........
+	Cache temporal, sin limite de paginas
+	Nuevo metodo de solicitud
+	Actualizacion del programa desde si mismo
+	Opcion para informar del mal funcionamiento de un diccionario
+	Adjuntado script de instalacion, y documentacion,,
+	Nuevo diccionario español<->ingles Collins
+	Busqueda de palabras en contexto
+	Corrector ortografico
+	Traductor
+	Citas...
+
+
+1.7.-	Mejorado los resultados de varios diccionarios.
+	Muchas mas definiciones y palabras enlazadas en los diccionarios Vox.
+	Incluidos los diccionarios: Castellano<>Euskera,
+	 modismos y conjugador de verbos.
+
+
+1.8.-	Arreglado el diccionario de la RAE y el traductor
+	revisado el codigo y corregido algun bug...
+
+
+1.9.-   Arreglado el Traductor, Conjugaciones, Medico, Collins.
+         ("Modismos" en el punto de mira)
+        Realizadas pequeñas optimizaciones..
+
+
+1.9.1.- Cambio de peticion para www.diccionarios.com
+
+
+@ENDNODE
+@NODE futur "Futuro"
+
+
+	ø Incluir mas diccionarios, alguna sugerencia? :)
+
+	ø Cache local?...
+
+	ø Rediseñar el aspecto del programa?...
+
+	ø Dios dira....
+
+	ø 
+
+
+
+@ENDNODE
+@NODE licen "Licencia"
+
+
+Este programa es FREEWARE
+
+
+
+@ENDNODE
+@NODE sopor "Soporte"
+
+
+
+¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯
+
+
+
+	Autor:		Diego Casorran
+
+
+	Contacto:	<dcr8520@wanadoo.es>
+			<dcr8520@amiga.org>
+
+
+	Equipo:		C= Amiga 1200 (Rev1D4)
+			Blizzard 060 DCE
+			128Mb RAM / 40Gb HD
+			..etc..
+
+
+
+¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯¯`°²º¤æ=¬«.,¸¸,.»¬=æ¤º²°`¯
+
+
+
+
+Actualizaciones de las librerias, siempre en:
+
+
+	http://digilander.libero.it/asoft/soft/index.html
+
+
+
+Pagina web de soporte HTMLView:
+
+
+	http://www.diku.dk/students/duff
+
+
+
+Soporte para Dicci, y otros proyectos:
+
+
+	http://Dicci.AltURL.com
+	http://Amiga.sourceforge.net
+
+
+
+@ENDNODE
